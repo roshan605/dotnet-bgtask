@@ -1,0 +1,10 @@
+﻿{
+  "profiles": {
+    "score_updater": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
