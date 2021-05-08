@@ -1,4 +1,5 @@
 using Jubilant.API.Contexts;
+using Jubilant.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,7 +31,8 @@ namespace Jubilant.API
             services.AddControllers();
             var connectionString = Configuration["ConnectionStrings:BooksDbConnectionString"];
 
-            services.AddDbContext<BookContext>(o => o.UseSqlServer(connectionString));
+            services.AddDbContext<BookContext>(o => o.UseSqlServer(connectionString,b=>b.EnableRetryOnFailure()));
+            services.AddScoped<IBookRepository, BookRepository>();
 
         }
 

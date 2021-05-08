@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jubilant.API.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20210508084316_InitialMigration")]
+    [Migration("20210508105219_InitialMigration")]
     partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
